@@ -1,6 +1,6 @@
 module github.com/agentplexus/agent-team-content
 
-go 1.25.5
+go 1.24.11
 
 require (
 	github.com/agentplexus/assistantkit v0.7.0
