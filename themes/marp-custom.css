@@ -1,0 +1,65 @@
+/* Custom Marp Theme
+   Replace this with your own custom theme CSS
+   Documentation: https://marpit.marp.app/theme-css
+*/
+
+/* @theme custom */
+
+@import 'default';
+
+section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+section.lead {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+a {
+  color: #ffd700;
+}
+
+code {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  border-left: 4px solid rgba(255, 255, 255, 0.5);
+  padding-left: 1em;
+  font-style: italic;
+}
+
+/* Footer and header styling */
+header, footer {
+  color: rgba(255, 255, 255, 0.7);
+}
