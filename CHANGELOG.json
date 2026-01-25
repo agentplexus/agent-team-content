@@ -1,0 +1,42 @@
+{
+  "ir_version": "1.0",
+  "project": "agent-team-content",
+  "repository": "https://github.com/agentplexus/agent-team-content",
+  "versioning": "semver",
+  "commit_convention": "conventional",
+  "maintainers": ["agentplexus", "johncwang@gmail.com"],
+  "releases": [
+    {
+      "version": "v0.1.0",
+      "date": "2026-01-25",
+      "highlights": [
+        { "description": "Initial release of agent-team-content: multi-agent system for content generation" },
+        { "description": "6 specialized agents for transforming conversations into multiple content formats" },
+        { "description": "Integration with Claude API for AI-powered content generation" }
+      ],
+      "added": [
+        { "description": "content CLI for content generation: generate, list-agents, version commands" },
+        { "description": "blog agent for Medium/Substack articles" },
+        { "description": "devto agent for technical articles on dev.to" },
+        { "description": "linkedin agent for professional LinkedIn posts" },
+        { "description": "twitter agent for Twitter/X threads" },
+        { "description": "marp agent for Marp Markdown presentations with speaker notes" },
+        { "description": "revealjs agent for Reveal.js presentations" },
+        { "description": "internal/agent package with orchestrator for parallel agent execution" },
+        { "description": "internal/conversation package for parsing JSON and Markdown conversations" },
+        { "description": "internal/llm package for Claude API integration via anthropic-sdk-go" },
+        { "description": "Agent specifications in specs/agents/ with YAML frontmatter" },
+        { "description": "Team workflow specification for parallel content generation" },
+        { "description": "AssistantKit integration for generating Claude Code and Kiro agents" }
+      ],
+      "documentation": [
+        { "description": "README with project overview, CLI usage, and agent descriptions" }
+      ],
+      "dependencies": [
+        { "description": "github.com/agentplexus/assistantkit v0.7.0 for agent generation" },
+        { "description": "github.com/anthropics/anthropic-sdk-go v1.19.0 for Claude API" },
+        { "description": "github.com/spf13/cobra v1.10.2 for CLI framework" }
+      ]
+    }
+  ]
+}
