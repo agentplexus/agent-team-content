@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/agentplexus/multi-agent-spec/main/schema/deployment/deployment.schema.json",
+  "team": "agent-team-content",
+  "targets": [
+    {
+      "name": "local-claude",
+      "platform": "claude-code",
+      "mode": "single-process",
+      "priority": "p1",
+      "output": ".claude/agents",
+      "config": {
+        "agentDir": ".claude/agents",
+        "format": "markdown"
+      }
+    },
+    {
+      "name": "local-kiro",
+      "platform": "kiro-cli",
+      "mode": "single-process",
+      "priority": "p2",
+      "output": "plugins/kiro/agents",
+      "config": {
+        "pluginDir": "plugins/kiro",
+        "format": "json"
+      }
+    }
+  ]
+}

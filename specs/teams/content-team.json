@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/agentplexus/multi-agent-spec/main/schema/orchestration/team.schema.json",
+  "name": "agent-team-content",
+  "version": "0.1.0",
+  "description": "A parallel team of agents that transforms conversations into multiple content formats for different platforms.",
+  "agents": [
+    "blog",
+    "devto",
+    "linkedin",
+    "twitter",
+    "marp",
+    "revealjs"
+  ],
+  "workflow": {
+    "type": "parallel",
+    "steps": [
+      {
+        "name": "blog-generation",
+        "agent": "blog",
+        "inputs": [
+          {
+            "name": "conversation",
+            "type": "object",
+            "description": "Parsed conversation with messages and metadata"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "article",
+            "type": "file",
+            "description": "Blog article in Markdown format (blog.md)"
+          }
+        ]
+      },
+      {
+        "name": "devto-generation",
+        "agent": "devto",
+        "inputs": [
+          {
+            "name": "conversation",
+            "type": "object",
+            "description": "Parsed conversation with messages and metadata"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "article",
+            "type": "file",
+            "description": "Technical article with dev.to frontmatter (devto.md)"
+          }
+        ]
+      },
+      {
+        "name": "linkedin-generation",
+        "agent": "linkedin",
+        "inputs": [
+          {
+            "name": "conversation",
+            "type": "object",
+            "description": "Parsed conversation with messages and metadata"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "post",
+            "type": "file",
+            "description": "LinkedIn post (linkedin.md)"
+          }
+        ]
+      },
+      {
+        "name": "twitter-generation",
+        "agent": "twitter",
+        "inputs": [
+          {
+            "name": "conversation",
+            "type": "object",
+            "description": "Parsed conversation with messages and metadata"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "thread",
+            "type": "file",
+            "description": "Twitter thread (twitter.md)"
+          }
+        ]
+      },
+      {
+        "name": "marp-generation",
+        "agent": "marp",
+        "inputs": [
+          {
+            "name": "conversation",
+            "type": "object",
+            "description": "Parsed conversation with messages and metadata"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "presentation",
+            "type": "file",
+            "description": "Marp presentation (marp.md)"
+          }
+        ]
+      },
+      {
+        "name": "revealjs-generation",
+        "agent": "revealjs",
+        "inputs": [
+          {
+            "name": "conversation",
+            "type": "object",
+            "description": "Parsed conversation with messages and metadata"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "presentation",
+            "type": "file",
+            "description": "Reveal.js presentation (revealjs.md)"
+          }
+        ]
+      }
+    ]
+  },
+  "context": "This team generates content in multiple formats from a single conversation input. All agents run in parallel since they are independent of each other."
+}
