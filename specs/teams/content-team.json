@@ -17,6 +17,7 @@
       {
         "name": "blog-generation",
         "agent": "blog",
+        "depends_on": [],
         "inputs": [
           {
             "name": "conversation",
@@ -35,6 +36,7 @@
       {
         "name": "devto-generation",
         "agent": "devto",
+        "depends_on": [],
         "inputs": [
           {
             "name": "conversation",
@@ -53,6 +55,7 @@
       {
         "name": "linkedin-generation",
         "agent": "linkedin",
+        "depends_on": [],
         "inputs": [
           {
             "name": "conversation",
@@ -71,6 +74,7 @@
       {
         "name": "twitter-generation",
         "agent": "twitter",
+        "depends_on": [],
         "inputs": [
           {
             "name": "conversation",
@@ -89,6 +93,7 @@
       {
         "name": "marp-generation",
         "agent": "marp",
+        "depends_on": [],
         "inputs": [
           {
             "name": "conversation",
@@ -107,6 +112,7 @@
       {
         "name": "revealjs-generation",
         "agent": "revealjs",
+        "depends_on": [],
         "inputs": [
           {
             "name": "conversation",
